@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border-color: black;
+        }
+        .mainTable {
+            background-color: lightpink;
+            border-style: solid;
+            height: 700px;
+            width: 700px;
+            justify-content: center;
+        }
+        th {
+            margin: 20px;
+            background-color: rgb(191, 191, 42);
+        }
+        td {
+            margin: 20px;
+            background-color: rgb(0, 166, 255);
+        }
+        input {
+            justify-content: center;
+            align-items: center;
+        }
+        .chooseFile {
+            padding-left: 100px;
+        }
+        .buttonRow {
+            padding-left: 150px;
+        }
+        button {
+            height: 30px;
+            width: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table class = "mainTable">
+            <tr>
+                <th colspan = "2">USER FORM</th>
+            </tr>
+            <tr>
+                <td>Enter Your Name</td>
+                <td>
+                    <input type = "text">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Your Email Address</td>
+                <td>
+                    <input type = "text">
+                </td>
+            </tr>
+            <tr>
+                <td>Select Game</td>
+                <td>
+                    <input type = "checkbox">Hockey
+                    <br>
+                    <input type = "checkbox">Football
+                    <br>
+                    <input type = "checkbox">Badminton
+                    <br>
+                    <input type = "checkbox">Cricket
+                    <br>
+                    <input type = "checkbox">Volleyball
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type = "radio">Male
+                    <input type = "radio">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Select Your Age</td>
+                <td>
+                    <select>
+                        <option id="" disabled selected>Select</option>
+                        <option>1-10</option>
+                        <option>11-20</option>
+                        <option>21-30</option>
+                        <option>31-40</option>
+                        <option>41-50</option>
+                        <option>51-60</option>
+                        <option>61-70</option>
+                        <option>71-80</option>
+                        <option>81-90</option>
+                        <option>91-100</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "2" class = "chooseFile">
+                    <button>Choose File</button>
+                    No File Chosen Yet.
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "2" class = "buttonRow">
+                    <button>Click Me</button>
+                    <button>Reset</button>
+                    <button>Submit Form</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

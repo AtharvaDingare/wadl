@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript and HTML</title>
+    </head>
+    <body>
+        <h1>User Input Tables and output using HTML and Javascript</h1>
+        <br>
+        <input type="text" id="number1">INPUT FIRST TABLE IN FORMAT HERE
+        <br> <br>
+        <input type="text" id="number2">INPUT SECOND TABLE IN FORMAT HERE
+        <br> <br>
+        <button onclick="generateTables()">SUBMIT</button>
+        <h4>TABLE 1 : </h4>
+        <br>
+        <div id="tableDisplayID1"></div>
+        <br> <br>
+        <h4>TABLE 2 : </h4>
+        <div id="tableDisplayID2"></div>
+        <br> <br>
+        <h4>TABLE 3 : </h4>
+        <div id="tableDisplayID3"></div>
+        <br> <br>
+        <script>
+            function generateTables() {
+                const inputString1 = document.getElementById("number1").value;
+                const inputString2 = document.getElementById("number2").value;
+                let row = parseInt(inputString1[0]), col = parseInt(inputString1[2]);
+                let row2 = parseInt(inputString2[0]), col2 = parseInt(inputString2[2]);
+                var output = '';
+                if((row !== row2) || (col !== col2)) {
+                    output = "<h3>UH! OH, WRONG INPUT FORMAT, PLEASE ENTER CORRECT NO. OF ROWS AND COLUMNS</h3>";
+                    document.getElementById("tableDisplayID1").innerHTML = output;
+                    return;
+                }
+                var tableHtml1 = '';
+                var tableHtml2 = '';
+                tableHtml1 = "<table>";
+                tableHtml2 = "<table>";
+                var numbers1 = [], numbers2 = [];
+                let start1 = inputString1[4];
+                for (let i = 1; i <= row; i++) {
+                    let current = start1 * i;
+                    tableHtml1 += "<tr>"
+                    for (let j = 0; j < col; j++) {
+                        let element = current + (i*j);
+                        tableHtml1 += "<td>" + element + "</td>";
+                        numbers1.push(element);
+                    }
+                    tableHtml1 += "</tr>"
+                }
+                let start2 = inputString2[4];
+                for (let i = 1; i <= row; i++) {
+                    let current = start2 * i;
+                    tableHtml2 += "<tr>";
+                    for (let j = 0; j < col; j++) {
+                        let element = current + (i*j);
+                        tableHtml2 += "<td>" + element + "</td>";
+                        numbers2.push(element);
+                    }
+                    tableHtml2 += "</tr>";
+                }
+                tableHtml1 += "</table>";
+                tableHtml2 += "</table>";
+                var tableHtmlfin = "<table>";
+                let index = 0;
+                for(let i=1; i <= row; i++) {
+                    tableHtmlfin += "<tr>";
+                    for(let j=0; j<col; j++) {
+                        let element = numbers1[index] * numbers2[index];
+                        tableHtmlfin += "<td>" + element + "</td>";
+                        index ++;
+                    }
+                    tableHtmlfin += "</tr>";
+                }
+                tableHtmlfin += "</table>";
+                document.getElementById("tableDisplayID1").innerHTML = tableHtml1;
+                document.getElementById("tableDisplayID2").innerHTML = tableHtml2;
+                document.getElementById("tableDisplayID3").innerHTML = tableHtmlfin;
+                return;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+nav {
+    background-color: rgb(7, 7, 230);
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.facebook-title {
+    font-size: 50px;
+    font-weight: 900;
+    display:flex;
+    flex-direction: row;
+    color: white;
+    margin-left: 10%;
+}
+.username-table {
+    display: flex;
+    flex-direction: column;
+    margin-left: 500px;
+}
+.login-information {
+    display:flex;
+    flex-direction: row;
+    color: white;
+}
+.login-button {
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.main-content {
+    display: flex;
+    flex-direction: row;
+    height: 620px;
+    background-color: silver;
+}
+.left-side-page {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.right-side-page {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.message {
+    font-size: 39px;
+    margin-left: 160px;
+    margin-top: 20px;
+    color: rgb(7, 7, 230);
+}
+.image {
+    margin-left: 160px;
+    margin-top: 25px;
+}
+.create-account {
+    color: rgb(7, 7, 230);
+    font-size: 60px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.small-text {
+    color: rgb(7, 7, 230);
+    font-size: 25px;
+    margin-left: 20px;
+}
+.signup-button {
+    background-color: green;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+}
+.input-boxes {
+    margin-left: 20px;
+    margin-top: 50px;
+    color:rgb(7, 7, 230);
+}
+.input-boxes input[type="text"] {
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+}
+.input-boxes input[type="password"] {
+    height: 40px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+}
+.input-boxes input[type="date"] {
+    height: 40px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+}

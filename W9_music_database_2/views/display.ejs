@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY FUNCTION</title>
+</head>
+<body>
+    <h1>DISPLAYED SONGS HERE : </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>SONG NAME</th>
+                <th>FILM</th>
+                <th>MUSIC DIRECTOR</th>
+                <th>SINGER</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% songs.forEach(song => { %>
+                <tr>
+                    <td><%= song.songname %></td>
+                    <td><%= song.film %></td>
+                    <td><%= song.musicdirector %></td>
+                    <td><%= song.singer %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

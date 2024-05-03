@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIPLICATION TABLES</title>
+</head>
+<body>
+    <h1>MULTIPLICATION TABLES</h1>
+    <input type="text" id="number1">ENTER THE VALUES OF THE FIRST TABLE IN FORMAT X#Y#Z
+    <br><br>
+    <input type="text" id="number2">ENTER THE VALUES OF THE SECOND TABLE IN FORMAT X#Y#K
+    <br><br>
+    <button id="button" onclick="onButtonTap()">SUBMIT</button>
+    <h2>TABLE 1 : </h2>
+    <div id="table1">
+
+    </div>
+    <h2>TABLE 2: </h2>
+    <div id="table2">
+
+    </div>
+    <h2>TABLE 3 :</h2>
+    <div id="table3">
+
+    </div>
+    <script>
+        function onButtonTap() {
+            var input1 = document.getElementById("number1").value;
+            var input2 = document.getElementById("number2").value;
+            let row = parseInt(input1[0]), col=parseInt(input1[2]);
+            let row2 = parseInt(input2[0]), col2=parseInt(input2[2]);
+            if((row !== row2) || (col !== col2)) {
+                var output = "<h2>WRONG INPUT FORMAT! PLEASE ENTER VALUES IN CORRECT INPUT FORMAT</h2>";
+                document.getElementById("table1").innerHTML = output;
+                document.getElementById("table2").innerHTML = output;
+                document.getElementById("table3").innerHTML = output;
+                return;
+            }
+            var numbersTable1 = [];
+            var table1 = "<table>";
+            let str1 = parseInt(input1[4]), str2 = parseInt(input2[4]);
+            for (let i = 1; i <= row; i++) {
+                table1 += "<tr>";
+                for (let j = 0; j < col; j++) {
+                    const element = (str1 * i) + (i * j);
+                    table1 += "<td>" + element + "</td>";
+                    numbersTable1.push(element);
+                }
+                table1 += "<tr>";
+            }
+            table1 += "</table>";
+
+            var numbersTable2 = [];
+            var table2 = "<table>";
+            for(let i=1; i<=row; i++) {
+                table2 += "<tr>";
+                for (let j = 0; j < col; j++) {
+                    const element = (str2 * i) + (i * j);
+                    table2 += "<td>" + element + "</td>";
+                    numbersTable2.push(element);
+                }
+                table2 += "</tr>";
+            }
+            table2 += "</table>";
+
+            var table3 = "<table>";
+            for(let i=0; i<row; i++) {
+                table3 += "<tr>";
+                for(let j=0; j<col; j++) {
+                    const ite = (i*col) + j;
+                    var ele1 = numbersTable1[ite], ele2 = numbersTable2[ite];
+                    if(ele1 === ele2) {
+                        table3 += "<td>" + ele1 + "</td>";
+                    }
+                    else{
+                        table3 += "<td>" + (ele1*ele2) + "</td>";
+                    }
+                }
+                table3 += "</tr>";
+            }
+            table3 += "</table>";
+
+            document.getElementById("table1").innerHTML = table1;
+            document.getElementById("table2").innerHTML = table2;
+            document.getElementById("table3").innerHTML = table3;
+
+            return;
+        }
+    </script>
+</body>
+</html>

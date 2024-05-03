@@ -1,0 +1,33 @@
+<!-- songs.ejs (HTML template using EJS) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songs</title>
+</head>
+<body>
+  <h1>Songs</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Song Name</th>
+        <th>Film</th>
+        <th>Music Director</th>
+        <th>Singer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% songs.forEach(song => { %>
+        <tr>
+          <td><%= song.songname %></td>
+          <td><%= song.film %></td>
+          <td><%= song.musicdirector %></td>
+          <td><%= song.singer %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

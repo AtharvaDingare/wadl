@@ -1,0 +1,16 @@
+.header-div {
+    background-color: blue;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.content {
+    justify-content: center;
+    display: flex;
+}
+.navbar {
+    background-color: silver;
+}
+

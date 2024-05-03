@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>College Website</title>
+
+   
+    <style>
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+
+   
+</head>
+<body>
+
+<div data-role="page" id="home">
+    <div data-role="header" class="header">
+        <h1>Home</h1>
+       
+        <div data-role="navbar" class="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#placements">Placements</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content" class="content">
+        <img src="https://via.placeholder.com/300" alt="College Image" width="100%">
+        <p>Welcome to our College website!</p>
+    </div>
+</div>
+
+<div data-role="page" id="about">
+    <div data-role="header" class="header">
+        <h1>About Us</h1>
+        <div data-role="navbar" class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about" class="ui-btn-active">About</a></li>
+                <li><a href="#placements">Placements</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content" class="content" id="about-content">
+       
+        <p>Loading about information...</p>
+    </div>
+</div>
+
+
+<div data-role="page" id="placements">
+    <div data-role="header" class="header">
+        <h1>Placements</h1>
+        
+        <div data-role="navbar" class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#placements" class="ui-btn-active">Placements</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content" class="content">
+        <img src="https://via.placeholder.com/300" alt="Placements" width="100%">
+        <p>Our college has an excellent placement record. Find out more about our placement services.</p>
+    </div>
+</div>
